@@ -1,39 +1,61 @@
 <!DOCTYPE html>
-<head>
-    <title>My Website</title>
-</head>
 <html>
-    <header>
-        <nav>
-            <a href="\index.html">Home</a>
-            <a href="\resume.html">Resume</a>
-            <a href="\portfolio.html">Portfolio</a>
-        </nav>
-    </header>
+    <head>
+        <title>My Website</title>
+    </head>
     <body>
-        <b>Programs Used and Projects</b>
-        <ol>
-            <li>Unity<br>
-                <img src="images/unity.jpeg">
-            </li>
-            <li>Shopify<br>
-                <img src="images/shopify.jpeg">
-            </li>
-            <li>Squarespace<br>
-                <img src="images/squarespace.jpeg">
-            </li>
-            <li>Solidworks Visualize<br>
-                <img src="images/visualize.png">
-            </li>
-            <li>Photoshop<br>
-                <img src="images/photoshop.png">
-            </li>
-            <li>Visual Studio Code<br>
-                <img src="images/vscode.png">
-            </li>
-            <li>PC Building<br>
-                <img src="images/pc.jpg">
-            </li>
-        </ol>
+        <!-- HEADER SECTION -->
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="portfolio.html">Portfolio</a>
+            </nav>
+        </header>
+
+        <!-- DIV SECTION -->
+        <div>
+            <b>Programs Used and Projects</b>
+            <ol>
+                <li>Unity<br>
+                    <img src="images/unity.jpeg" alt="Unity">
+                </li>
+                <li>Shopify<br>
+                    <img src="images/shopify.jpeg" alt="Shopify">
+                </li>
+                <li>Squarespace<br>
+                    <img src="images/squarespace.jpeg" alt="Squarespace">
+                </li>
+                <li>Solidworks Visualize<br>
+                    <img src="images/visualize.png" alt="Solidworks Visualize">
+                </li>
+                <li>Photoshop<br>
+                    <img src="images/photoshop.png" alt="Photoshop">
+                </li>
+                <li>Visual Studio Code<br>
+                    <img src="images/vscode.png" alt="MS VSCode">
+                </li>
+                <li>PC Building<br>
+                    <img src="images/pc.jpg" alt="PC Building">
+                </li>
+            </ol>
+        </div>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            <b>Feel free to shoot me an email!</b>
+            <form action="mailto:tonirosevirata@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <label for="text">Message</label>
+                <input type="text" id="text" name="text">
+                <br>
+                <input type="submit" value="submit">
+            </form>
+        </footer>
     </body>
 </html>
