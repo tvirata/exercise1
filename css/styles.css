@@ -1,0 +1,27 @@
+
+header { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(120, 55, 25, 0.548);
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav { 
+    color: white;
+    text-align: center;
+}
+footer { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: rgba(120, 55, 25, 0.548);
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+img { 
+    width: 50%;
+    height: auto;
+}
