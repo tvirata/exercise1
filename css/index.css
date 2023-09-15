@@ -1,0 +1,101 @@
+*, *:before, *:after { 
+    box-sizing: border-box;
+    position: relative;
+}
+.welcome { 
+    background: #4A332D;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #D0C7C2; */
+}
+.welcome .main { 
+    background: #4A332D;
+    color: #F5F2EA;
+    height: 700px;
+    width: 100%;
+    position: relative;
+    font-size: 100px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.welcome .main .main-text { 
+    animation: 10s pop ease;
+}
+@keyframes pop { 
+    0% { 
+        color: white;
+        transform: scale(0);
+        opacity: 0;
+        text-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    50% { 
+        color: #1B4B43;
+        transform: scale(2);
+        opacity: 1;
+        text-shadow: 3px 10px 5px rgba(0,0,0,0.5);
+    }
+    100% { 
+        transform: none;
+    }
+}
+
+.welcome .intro { 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome .intro p  {
+    color: #4A332D;
+    font-size: 75px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.welcome .intro p:nth-child(1) { 
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+.welcome .intro p:nth-child(2) { 
+    color: white;
+    animation-name: wave;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes wave { 
+    50% { 
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    100% { 
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
