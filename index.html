@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>My Website</title>
   </head>
@@ -60,6 +59,13 @@
                 encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+        <iframe
+          src="//widget.websudoku.com/?level=1"
+          width="200"
+          height="260"
+          scrolling="no"
+          frameborder="0"
+        ></iframe>
       </div>
 
       <!-- FOOTER SECTION -->
@@ -70,16 +76,24 @@
           method="post"
           enctype="text/plain"
         >
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" />
-          <br />
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" />
-          <br />
-          <label for="text">Message</label>
-          <input type="text" id="text" name="text" />
-          <br />
-          <input type="submit" value="submit" />
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+            <br />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+            <br />
+          </div>
+          <div>
+            <label for="text">Message</label>
+            <input type="text" id="text" name="text" />
+            <br />
+          </div>
+          <div>
+            <input type="submit" value="submit" />
+          </div>
         </form>
       </footer>
     </div>
