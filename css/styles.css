@@ -1,18 +1,26 @@
 /* OVERALL STYLES START */
 body {
-  background-image: url(svg/cloud.svg);
-  background-repeat: repeat;
-}
-div {
-  background: #f5f2ea;
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("space.jpg");
+}
+div { 
+  color: white;
 }
 header {
-  background-color: #6c4a3f;
-  position: sticky;
+  background-color: #4a2552;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0px;
+  z-index: 1;
+}
+h1 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  margin-top: 80px;
 }
 nav {
   color: white;
@@ -44,31 +52,51 @@ nav ul li a.active {
   color: black;
   padding: 30px;
 }
-nav ul li a:hover {
+nav ul li:hover {
   background-color: #d0c7c2;
   color: black;
   padding: 30px;
+  box-shadow: 10px 5px 5px white;
+  -webkit-box-reflect: below;
 }
 footer {
+  text-align: center;
+  position: relative;
   color: white;
-  background-color: #6c4a3f;
-  display: inline;
-  inline-size: 10px;
+  background-color: #552869;
+  bottom: 0px;
+}
+::after {
+  background-color: #552869;
+}
+footer b { 
+  font-stretch: extra-expanded;
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 0;
+  animation-name: flicker;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
 footer div {
-  color: white;
-  background-color: #6c4a3f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   border-right: 1px solid white;
   border-left: 1px solid white;
 }
 img {
+  image-rendering: optimizeSpeed;
   width: 25%;
   height: auto;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px;
 }
 h1 {
   text-align: center;
@@ -81,150 +109,10 @@ p {
 }
 iframe {
   width: 100%;
-  height: 75%;
-}
-@media screen and (max-width: 480px) {
-  header,
-  footer {
-    width: 100%;
-    height: auto;
-  }
-}
-@media screen and (min-width: 767px) {
-  header,
-  footer {
-    width: 100%;
-    height: auto;
-  }
+  height: auto;
 }
 /* OVERALL STYLES END */
 /* ================== */
-
-/* INDEX STYLES START */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  position: relative;
-}
-.welcome {
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  animation: hide 0s ease-in 10s;
-  animation-fill-mode: forwards;
-}
-.welcome .main {
-  height: 700px;
-  width: 100%;
-  position: relative;
-  font-size: 100px;
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
-}
-.welcome .main h {
-  animation-duration: 5s;
-  animation-name: pop;
-  animation-timing-function: ease;
-}
-.welcome .intro {
-  /* background: black;
-  color: white; */
-  height: 700px;
-  width: 100%;
-  position: relative;
-}
-.welcome .intro p {
-  text-align: center;
-  /* color: white; */
-  font-size: 50px;
-  letter-spacing: 6px;
-  font-weight: 300;
-  margin: 0;
-  line-height: 0;
-  animation: glitch 0.5s infinite;
-}
-.welcome .intro p:nth-child(2) {
-  animation: glitch2 1s infinite;
-}
-.welcome .intro p:nth-child(3) {
-  animation: glitch3 1s infinite;
-}
-@keyframes pop {
-  0% {
-    color: white;
-    transform: scale(0);
-    opacity: 0;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  50% {
-    color: brown;
-    transform: scale(2);
-    opacity: 1;
-    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    transform: none;
-  }
-}
-@keyframes glitch {
-  0% {
-    transform: none;
-    opacity: 1;
-  }
-  50% {
-    transform: skew(-2deg, 0.6deg);
-    opacity: 0.75;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
-  }
-}
-@keyframes glitch2 {
-  0% {
-    transform: none;
-    opacity: 0.25;
-  }
-  50% {
-    transform: translate(-3px, -1px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: none;
-    opacity: 0.25;
-  }
-}
-@keyframes glitch3 {
-  0% {
-    transform: none;
-    opacity: 0.25;
-  }
-  50% {
-    transform: translate(3px, 1px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: none;
-    opacity: 0.25;
-  }
-}
-@keyframes hide {
-  to {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
-}
-/* INDEX STYLES END */
-/* ================ */
 
 /* RESUME STYLES START */
 table {
@@ -233,6 +121,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-collapse: collapse;
 }
 tr:nth-child(odd) {
   background: #bcaaa4;
@@ -247,6 +136,9 @@ td {
   padding-bottom: 5px;
   padding-left: 3px;
   padding-right: 3px;
+  border-color: teal;
+  border-style: solid;
+  border-width: 5px;
 }
 #skills {
   display: flex;
@@ -254,15 +146,71 @@ td {
   padding-left: 20px;
   padding-right: 20px;
 }
-@media screen and (max-width: 480px) {
-  table {
-    overflow-x: scroll;
-    overflow-y: hidden;
-  }
+td:hover { 
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px white;
 }
 /* RESUME STYLES END */
 /* ================= */
 
 /* PORTFOLIO STYLES START */
-
+ol { 
+  display: grid;
+  column-gap: 5px;
+  row-gap: 5px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  list-style-type: circle;
+  list-style-position: inside;
+}
 /* PORTFOLIO STYLES END */
+
+/* ANIMATIONS */
+@keyframes flicker {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  50% {
+    transform: skew(-2deg, 0.6deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* MEDIA */
+@media screen and (max-width: 480px) {
+  body { 
+    background-size: contain;
+    background-repeat: round;
+  }
+  header,
+  footer {
+    width: 100%;
+    height: auto;
+  }
+  table {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-color: purple;
+  }
+}
+@media screen and (min-width: 767px) {
+  header,
+  footer {
+    width: 100%;
+    height: auto;
+  }
+}
